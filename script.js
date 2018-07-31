@@ -10,7 +10,7 @@ class VKSW {
     }, _config);
 
     const selector = '#page_wall_posts div' + config.own ? '.own' : '';
-    var last_id = document.querySelector(loop_selector).id;
+    var last_id = document.querySelector(selector).id;
 
     function loop() {
       var post = document.querySelector(selector);
