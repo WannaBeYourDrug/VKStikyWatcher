@@ -22,6 +22,12 @@ Actions are functions that do someting with new post
 
 @param {DOMElement} post - element of new post
 
+Default actions:
+like - likes new post
+comment - writes letter 'a' in comments of new post
+
+Also you can use `VKSW.storage` object to store data
+
 ## Disclaimer
 
 For Educational Purposes Only
