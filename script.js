@@ -2,6 +2,7 @@ class VKSW {
   constructor(_config = {}) {
     var config = Object.assign({
       own: true,
+      timeout: 100,
       actions: [
         VKSW.actions.comment,
         VKSW.actions.like
@@ -20,7 +21,7 @@ class VKSW {
         });
       }
     }
-    this.intervalId = setInterval(loop, 100);
+    this.intervalId = setInterval(loop, config.timeout);
     console.log('[VKSW] Started. Interval id:',this.intervalId);
   }
   stop() {
