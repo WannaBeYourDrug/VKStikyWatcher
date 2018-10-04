@@ -1,6 +1,6 @@
 class VKSW {
   constructor(_config = {}) {
-    var config = Object.assign({
+    const config = Object.assign({
       own: true,
       timeout: 100,
       actions: [
@@ -9,7 +9,7 @@ class VKSW {
       ]
     }, _config);
 
-    const selector = '#page_wall_posts div' + config.own ? '.own' : '';
+    const selector = '#page_wall_posts div' + (config.own ? '.own' : '') + ':not(.post_fixed)';
     var last_id = document.querySelector(selector).id;
 
     function loop() {
